@@ -40,6 +40,11 @@ Construo sistemas web de ponta a ponta: do levantamento de requisitos à arquite
 <img src="https://img.shields.io/badge/Angular-DD0031?style=flat-square&logo=angular&logoColor=white"/>
 <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white"/>
 
+**Mobile**<br/>
+<img src="https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white"/>
+<img src="https://img.shields.io/badge/Dart-0175C2?style=flat-square&logo=dart&logoColor=white"/>
+<img src="https://img.shields.io/badge/Expo-000020?style=flat-square&logo=expo&logoColor=white"/>
+
 **Banco de dados**<br/>
 <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white"/>
 <img src="https://img.shields.io/badge/SQL_Server-CC2927?style=flat-square&logo=microsoftsqlserver&logoColor=white"/>
@@ -57,11 +62,17 @@ Construo sistemas web de ponta a ponta: do levantamento de requisitos à arquite
 
 ## Projetos em destaque
 
-### 💳 [Wallet Ledger API](https://github.com/Mavoxweb/wallet-ledger-api)
+### 💳 Wallet Ledger: carteira digital de ponta a ponta
 
-Carteira digital com **livro-razão de partidas dobradas**: contas, transferências PIX por chave, extrato e QR code no padrão BR Code. O foco é não errar com dinheiro: nenhum saldo negativo sob concorrência (testado com 100 transferências simultâneas), nenhuma cobrança duplicada em repetições (idempotência atômica no PostgreSQL) e cada decisão registrada em ADRs.
+O foco é não errar com dinheiro, do banco de dados até o dedo de quem toca em "Confirmar".
+
+**[API](https://github.com/Mavoxweb/wallet-ledger-api)**: livro-razão de **partidas dobradas**, com contas, PIX por chave, extrato e QR code BR Code. Nenhum saldo negativo sob concorrência (testado com 100 transferências simultâneas), nenhuma cobrança duplicada em repetições (idempotência atômica no PostgreSQL) e cada decisão registrada em ADRs.
 
 `.NET 10` · `ASP.NET Core` · `EF Core` · `PostgreSQL` · `Testcontainers` · `Docker` · `GitHub Actions` · 144 testes
+
+**[App](https://github.com/Mavoxweb/wallet-ledger-mobile)**: o correntista em Flutter, com saldo, PIX por chave ou QR code, extrato e cobrança. Se a conexão cai no meio de um PIX, tentar de novo devolve o mesmo comprovante, sem debitar duas vezes. Cliente HTTP gerado do contrato da API, APK publicado a cada versão.
+
+`Flutter` · `Dart` · `Bloc` · `go_router` · `Dio` · `OpenAPI` · 134 testes
 
 | Outros projetos | O que é | Stack |
 |---|---|---|
