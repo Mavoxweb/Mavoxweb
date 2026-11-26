@@ -72,7 +72,7 @@ O foco é não errar com dinheiro, do banco de dados até o dedo de quem toca em
 
 **[App](https://github.com/Mavoxweb/wallet-ledger-mobile)**: o correntista em Flutter, com saldo, PIX por chave ou QR code, extrato e cobrança. Se a conexão cai no meio de um PIX, tentar de novo devolve o mesmo comprovante, sem debitar duas vezes. Cliente HTTP gerado do contrato da API, APK publicado a cada versão.
 
-`Flutter` · `Dart` · `Bloc` · `go_router` · `Dio` · `OpenAPI` · 134 testes
+`Flutter` · `Dart` · `Bloc` · `go_router` · `Dio` · `OpenAPI` · 136 testes
 
 | Outros projetos | O que é | Stack |
 |---|---|---|
