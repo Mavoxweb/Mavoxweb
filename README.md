@@ -57,7 +57,13 @@ Construo sistemas web de ponta a ponta: do levantamento de requisitos à arquite
 
 ## Projetos em destaque
 
-| Projeto | O que é | Stack |
+### 💳 [Wallet Ledger API](https://github.com/Mavoxweb/wallet-ledger-api)
+
+Carteira digital com **livro-razão de partidas dobradas**: contas, transferências PIX por chave, extrato e QR code no padrão BR Code. O foco é não errar com dinheiro: nenhum saldo negativo sob concorrência (testado com 100 transferências simultâneas), nenhuma cobrança duplicada em repetições (idempotência atômica no PostgreSQL) e cada decisão registrada em ADRs.
+
+`.NET 10` · `ASP.NET Core` · `EF Core` · `PostgreSQL` · `Testcontainers` · `Docker` · `GitHub Actions` · 144 testes
+
+| Outros projetos | O que é | Stack |
 |---|---|---|
 | [**ocafy**](https://github.com/Mavoxweb/ocafy) | App de gestão doméstica gamificada. Monorepo com web, mobile e API tipada | Next.js · Expo · tRPC · Drizzle · Neon · Turborepo |
 | [**mavox-web**](https://github.com/Mavoxweb/mavox-web) | Site da agência Mavox com banco, migrations e testes E2E | Next.js 15 · TypeScript · Tailwind · Neon · Playwright |
