@@ -64,15 +64,19 @@ Construo sistemas web de ponta a ponta: do levantamento de requisitos à arquite
 
 ### 💳 Wallet Ledger: carteira digital de ponta a ponta
 
-O foco é não errar com dinheiro, do banco de dados até o dedo de quem toca em "Confirmar".
+O foco é não errar com dinheiro: do banco de dados até o dedo de quem toca em "Confirmar", e até a mesa de quem atende o cliente quando algo dá errado.
 
 **[API](https://github.com/Mavoxweb/wallet-ledger-api)**: livro-razão de **partidas dobradas**, com contas, PIX por chave, extrato e QR code BR Code. Nenhum saldo negativo sob concorrência (testado com 100 transferências simultâneas), nenhuma cobrança duplicada em repetições (idempotência atômica no PostgreSQL) e cada decisão registrada em ADRs.
 
-`.NET 10` · `ASP.NET Core` · `EF Core` · `PostgreSQL` · `Testcontainers` · `Docker` · `GitHub Actions` · 144 testes
+`.NET 10` · `ASP.NET Core` · `EF Core` · `PostgreSQL` · `Testcontainers` · `Docker` · `GitHub Actions` · 195 testes
 
 **[App](https://github.com/Mavoxweb/wallet-ledger-mobile)**: o correntista em Flutter, com saldo, PIX por chave ou QR code, extrato e cobrança. Se a conexão cai no meio de um PIX, tentar de novo devolve o mesmo comprovante, sem debitar duas vezes. Cliente HTTP gerado do contrato da API, APK publicado a cada versão.
 
 `Flutter` · `Dart` · `Bloc` · `go_router` · `Dio` · `OpenAPI` · 136 testes
+
+**[Backoffice](https://github.com/Mavoxweb/wallet-ledger-backoffice)**: o painel da operação em Angular. Busca a conta pelo CPF, e-mail ou final da conta, bloqueia na hora (inclusive no app que já está aberto), estorna um PIX sem risco de estornar duas vezes e registra quem fez o quê, quando e por quê. A regra de quem pode o quê fica na API; a tela só esconde.
+
+`Angular 22` · `Signals` · `Angular Material` · `RxJS` · `OpenAPI` · `Vitest` · `Playwright` · 78 testes + e2e
 
 | Outros projetos | O que é | Stack |
 |---|---|---|
